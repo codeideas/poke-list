@@ -1,0 +1,14 @@
+doctype html
+html(ng-app="pokelistApp")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Poke List - Just an AngularJS App
+    link(rel="stylesheet" href="css/app.min.css")
+    script(src="js/libs.min.js")
+    script(src="js/app.min.js")
+
+  body
+    .progress(ng-show="loadingPage")
+      .indeterminate
+    .container(ng-view)

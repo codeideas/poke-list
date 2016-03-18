@@ -1,0 +1,16 @@
+{
+  "name": "poke-list",
+  "description": "Poke List - Just an AngularJS App",
+  "version": "0.0.1",
+  "homepage": "https://github.com/codeideas/poke-list",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "angular-resource": "~1.5.0",
+    "materialize": "~0.97.5"
+  }
+}

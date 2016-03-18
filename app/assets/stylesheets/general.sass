@@ -1,0 +1,58 @@
+// *************************************
+//
+//   General
+//
+// *************************************
+
+body
+  background-color: #DDD
+
+// ----- Container ----- //
+
+.container
+  background-color: #FAFAFA
+  box-shadow: 0 15px 20px 0 #777
+  margin: 30px auto 0
+  width: 680px
+
+// ----- Header ----- //
+
+header
+  background-color: $primary-color
+  color: #FFF
+  padding: 30px
+
+  .header-progress-bar
+    @extend .progress
+    margin-top: 0
+
+  .header-title
+    font-size: 32px
+    line-height: 35px
+
+// ----- Nav ----- //
+
+nav
+  text-align: center
+
+  ul li
+    float: left
+    &:last-child
+      float: right
+
+// ----- Buttons ----- //
+
+.btn-github
+  @extend .btn
+  @extend .waves-effect
+  @extend .waves-teal
+  background-color: #777
+  float: right
+
+  &:hover
+    background-color: #888
+
+.btn-navigation
+  @extend .btn
+  @extend .waves-effect
+  @extend .waves-teal

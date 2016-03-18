@@ -1,0 +1,128 @@
+// *************************************
+//
+//   Pokemon
+//
+// *************************************
+
+.pokemon
+  margin: 15px
+
+  &:after
+    content: ''
+    clear: both
+    display: block
+
+// ----- Id ----- //
+
+.pokemon-id
+  font-size: 35px
+  text-align: right
+
+// ----- List ----- //
+
+.pokemon-list
+  @extend .collection
+  margin: 0
+
+  .pokemon-list-item
+    @extend .collection-item
+    text-align: center
+    text-transform: capitalize
+
+    &:nth-of-type(even)
+      background-color: $primary-color-light
+
+// ----- Name ----- //
+
+.pokemon-name
+  font-size: 35px
+  float: left
+  text-transform: capitalize
+
+// ----- Stat ----- //
+
+.pokemon-stat-list
+  float: left
+  margin: 0
+  padding-top: 15px
+
+  &:after
+    clear: both
+    content: ''
+    display: block
+
+  .pokemon-stat
+    margin: 5px 0
+
+    .pokemon-stat-name
+      display: inline-block
+      margin-left: 15px
+      text-transform: capitalize
+      width: 125px
+
+    .pokemon-stat-bar
+      background-color: #DDD
+      display: inline-block
+      width: 345px
+
+    .pokemon-stat-value
+      background-color: $secondary-color
+      color: #FFF
+      display: inline-block
+      padding-left: 5px
+      width: 150px
+
+// ----- Thumbs ----- //
+
+.pokemon-thumbs
+  float: left
+  text-align: center
+  width: 150px
+
+// ----- Type ----- //
+
+.pokemon-type-list
+  float: left
+  margin-left: 25px
+  margin-top: 13px
+
+.pokemon-type
+  margin-right: 15px
+  padding: 5px
+
+  &.pokemon-type-normal
+    background-color: #9C9C63
+  &.pokemon-type-fighting
+    background-color: #AE2A24
+  &.pokemon-type-flying
+    background-color: #8E6FEB
+  &.pokemon-type-poison
+    background-color: #923A92
+  &.pokemon-type-ground
+    background-color: #DBB54D
+  &.pokemon-type-rock
+    background-color: #A48F32
+  &.pokemon-type-bug
+    background-color: #97A51D
+  &.pokemon-type-ghost
+    background-color: #644E88
+  &.pokemon-type-steel
+    background-color: #A0A0C0
+  &.pokemon-type-fire
+    background-color: #ED6D12
+  &.pokemon-type-water
+    background-color: #4578ED
+  &.pokemon-type-grass
+    background-color: #69C23D
+  &.pokemon-type-electric
+    background-color: #F6C913
+  &.pokemon-type-psychic
+    background-color: #F73670
+  &.pokemon-type-ice
+    background-color: #7ECECE
+  &.pokemon-type-dragon
+    background-color: #5E1DF7
+  &.pokemon-type-dark
+    background-color: #644E40
+  &.pokemon-type-fairy
+    background-color: #E87890
