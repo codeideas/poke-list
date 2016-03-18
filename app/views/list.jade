@@ -1,0 +1,13 @@
+header
+  a.btn-github(href="https://github.com/codeideas/poke-list") Github
+  .header-title Poke List
+
+main.pokemon-list
+  a.pokemon-list-item(ng-href="#/{{pokemon.name}}" ng-repeat="pokemon in pokemons") {{pokemon.name}}
+
+nav
+  ul
+    li
+      a.btn-navigation(ng-href="#/list/{{previousPage}}" ng-if="previousPage") Previous
+    li
+      a.btn-navigation(ng-href="#/list/{{nextPage}}" ng-if="nextPage < 18") Next
