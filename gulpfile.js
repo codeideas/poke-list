@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    jade = require('gulp-jade');
 
 
 gulp.task('libs', function () {
@@ -21,6 +22,13 @@ gulp.task('libs', function () {
 
   gulp.src('./bower_components/materialize/font/**/*')
     .pipe(gulp.dest('./dist/font'))
+});
+
+
+gulp.task('templates', function () {
+  gulp.src('./app/**/*.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('./dist'))
 });
 
 
@@ -41,10 +49,11 @@ gulp.task('stylesheets', function () {
 });
 
 
-gulp.task('start', ['libs', 'javascripts', 'stylesheets']);
+gulp.task('start', ['libs', 'templates', 'javascripts', 'stylesheets']);
 
 
-gulp.task('watch', ['javascripts', 'stylesheets'], function () {
+gulp.task('watch', ['templates', 'javascripts', 'stylesheets'], function () {
+  gulp.watch('./app/**/*.jade', ['templates']);
   gulp.watch(['./app/components/**/*.js', './app/app.js'], ['javascripts']);
   gulp.watch('./app/assets/stylesheets/*.sass', ['stylesheets']);
 });
