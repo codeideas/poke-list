@@ -30,6 +30,8 @@
     "prestart": "npm install && gulp",
     "start": "http-server -a localhost -p 8000 -c-1",
 
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+
     "pretest": "npm install && gulp",
     "test": "karma start tests/karma.conf.js",
     "test-single-run": "karma start tests/karma.conf.js  --single-run",
