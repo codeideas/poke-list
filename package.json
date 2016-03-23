@@ -21,17 +21,16 @@
     "gulp-uglify": "^1.5.3",
     "gulp-sass": "^2.2.0",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-jade": "^1.1.0"
+    "gulp-jade": "^1.1.0",
+    "gulp-gh-pages": "^0.5.4"
   },
   "scripts": {
     "postinstall": "bower install",
 
-    "prestart": "npm install && gulp start",
+    "prestart": "npm install && gulp",
     "start": "http-server -a localhost -p 8000 -c-1",
 
-    "publish": "gulp start",
-
-    "pretest": "npm install && gulp start",
+    "pretest": "npm install && gulp",
     "test": "karma start tests/karma.conf.js",
     "test-single-run": "karma start tests/karma.conf.js  --single-run",
 
