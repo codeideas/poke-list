@@ -5,8 +5,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    jade = require('gulp-jade'),
-    ghPages = require('gulp-gh-pages');
+    jade = require('gulp-jade');
 
 
 gulp.task('libs', function () {
@@ -51,12 +50,6 @@ gulp.task('stylesheets', function () {
 
 
 gulp.task('default', ['libs', 'templates', 'javascripts', 'stylesheets']);
-
-
-gulp.task('deploy', ['default'], function() {
-  gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
 
 
 gulp.task('watch', ['templates', 'javascripts', 'stylesheets'], function () {
